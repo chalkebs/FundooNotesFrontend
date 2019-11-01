@@ -1,0 +1,80 @@
+<br>
+<div class="note-mat-card" fxLayoutAlign="start start" fxLayout="row wrap">Pinned Notes</div>
+<div class="note-mat-card" fxLayoutAlign="start start" fxLayout="row wrap">
+    <mat-card class="display-note" [ngStyle]="{'background':n.color}" fxLayout="column" fxLayoutGap="7px" *ngFor="let n of notes">
+        <mat-icon matTooltip="Pin note" *ngIf="pin_note==true" class="pin-icon" (click)="onPin(n.noteId)">turned_in_not</mat-icon>
+        <mat-icon matTooltip="Unpin note" *ngIf="pin_note==false" class="pin-icon" (click)="onPin(n.noteId)">turned_in</mat-icon>
+        <div (click)="update(n)">
+            <div fxLayout="row">
+                <div class="note-title-field" fxLayout="row">
+                    {{ n.noteTitle }}
+                </div>
+            </div>
+            <div class="note-data-field">
+                {{ n.noteData }}
+            </div>
+        </div>
+        <mat-card-actions fxLayout="row" fxLayoutAlign="space-around center">
+            <div fxLayout="row" fxLayoutGap="12px">
+                <mat-menu #paletteColor="matMenu">
+                    <div class="palette" fxLayout="row wrap" fxLayoutGap="8px">
+                        <button mat-mini-fab (click)="color(c,n.noteId)" *ngFor="let c of colorCodes" class="circle" [ngStyle]="{'background':c}">
+                        </button>
+                    </div>
+                </mat-menu>
+                <mat-icon matTooltip="Remind me" class="note-icons">add_alert</mat-icon>
+                <mat-icon matTooltip="Collaborator" class="note-icons">person_add</mat-icon>
+                <mat-icon matTooltip="Change color" [matMenuTriggerFor]="paletteColor" class="note-icons">palette</mat-icon>
+                <mat-icon matTooltip="Add image" class="note-icons">crop_original</mat-icon>
+                <mat-icon (click)="archive1(n.noteId)" matTooltip="Archive" class="note-icons">archive</mat-icon>
+                <mat-icon mat-button [matMenuTriggerFor]="menu" matTooltip="More" class="note-icons">more_vert</mat-icon>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="trash1(n.noteId)" class="menu-labels">Delete note</button>
+                    <button mat-menu-item class="menu-labels">Add label</button>
+                    <button mat-menu-item class="menu-labels">Make a copy</button>
+                    <button mat-menu-item class="menu-labels">Show checkboxes</button>
+                </mat-menu>
+            </div>
+        </mat-card-actions>
+    </mat-card>
+</div>
+<mat-divider></mat-divider>
+<div class="note-mat-card" fxLayoutAlign="start start" fxLayout="row wrap">Other Notes</div>
+<div class="note-mat-card" fxLayoutAlign="start start" fxLayout="row wrap">
+    <mat-card class="display-note" [ngStyle]="{'background':n1.color}" fxLayout="column" fxLayoutGap="7px" *ngFor="let n1 of notes1">
+        <mat-icon matTooltip="Pin note" *ngIf="pin_note==true" class="pin-icon" (click)="onPin(n1.noteId)">turned_in_not</mat-icon>
+        <mat-icon matTooltip="Unpin note" *ngIf="pin_note==false" class="pin-icon" (click)="onPin(n1.noteId)">turned_in</mat-icon>
+        <div (click)="update(n1)">
+            <div fxLayout="row">
+                <div class="note-title-field" fxLayout="row">
+                    {{ n1.noteTitle }}
+                </div>
+            </div>
+            <div class="note-data-field">
+                {{ n1.noteData }}
+            </div>
+        </div>
+        <mat-card-actions fxLayout="row" fxLayoutAlign="space-around center">
+            <div fxLayout="row" fxLayoutGap="12px">
+                <mat-menu #paletteColor="matMenu">
+                    <div class="palette" fxLayout="row wrap" fxLayoutGap="8px">
+                        <button mat-mini-fab (click)="color(c,n1.noteId)" *ngFor="let c of colorCodes" class="circle" [ngStyle]="{'background':c}">
+                        </button>
+                    </div>
+                </mat-menu>
+                <mat-icon matTooltip="Remind me" class="note-icons">add_alert</mat-icon>
+                <mat-icon matTooltip="Collaborator" class="note-icons">person_add</mat-icon>
+                <mat-icon matTooltip="Change color" [matMenuTriggerFor]="paletteColor" class="note-icons">palette</mat-icon>
+                <mat-icon matTooltip="Add image" class="note-icons">crop_original</mat-icon>
+                <mat-icon (click)="archive1(n1.noteId)" matTooltip="Archive" class="note-icons">archive</mat-icon>
+                <mat-icon mat-button [matMenuTriggerFor]="menu" matTooltip="More" class="note-icons">more_vert</mat-icon>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="trash1(n1.noteId)" class="menu-labels">Delete note</button>
+                    <button mat-menu-item class="menu-labels">Add label</button>
+                    <button mat-menu-item class="menu-labels">Make a copy</button>
+                    <button mat-menu-item class="menu-labels">Show checkboxes</button>
+                </mat-menu>
+            </div>
+        </mat-card-actions>
+    </mat-card>
+</div>

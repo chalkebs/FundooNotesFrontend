@@ -1,0 +1,63 @@
+<mat-card class="mainDiv">
+    <div class="example-container">
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+            <h2 style="color:navy;font-family: 'Times New Roman', Times, serif; font-size: 35px; 
+          text-align: center;">Registration</h2>
+
+            <mat-form-field class="width">
+                <input matInput placeholder="First Name" formControlName="firstName" name="firstName" required>
+                <mat-error *ngIf="error.firstName.errors">
+                    <mat-error *ngIf="error.firstName.errors.required">First Name is required</mat-error>
+                    <mat-error *ngIf="error.firstName.errors.pattern">First Name is of Characters only</mat-error>
+                </mat-error>
+            </mat-form-field>
+
+            <br>
+            <mat-form-field class="width">
+                <input matInput placeholder="Last Name" formControlName="lastName" name="lastName" required>
+                <mat-error *ngIf="error.lastName.errors">
+                    <mat-error *ngIf="error.lastName.errors.required">Last Name is required</mat-error>
+                    <mat-error *ngIf="error.lastName.errors.pattern">Last Name is of Characters Only</mat-error>
+                </mat-error>
+            </mat-form-field>
+
+            <br>
+            <mat-form-field class="width">
+                <input matInput placeholder="Email ID" formControlName="emailId" type="email" name="emailId" required>
+                <mat-error *ngIf="error.emailId.errors">
+                    <mat-error *ngIf="error.emailId.errors.required">Email is required</mat-error>
+                    <mat-error *ngIf="error.emailId.errors.pattern">Email must be a valid email address</mat-error>
+                </mat-error>
+            </mat-form-field>
+
+            <br>
+            <mat-form-field class="width">
+                <input matInput placeholder="Password" formControlName="password" name="password" [type]="hide ? 'text' : 'password'" required>
+                <mat-error *ngIf="error.password.errors">
+                    <mat-error *ngIf="error.password.errors.required">Password is required</mat-error>
+                    <mat-error *ngIf="error.password.errors.minlength">Password must be at least 3 characters</mat-error>
+                </mat-error>
+                <mat-icon id="pwd-visibility-icon" mat-icon-button matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+            </mat-form-field>
+
+            <br>
+            <mat-form-field class="width">
+                <input matInput type="text" #input maxlength="10" name="mobileNum" formControlName="mobileNum" placeholder="Mobile No." required>
+                <mat-error *ngIf="error.mobileNum.errors">
+                    <mat-error *ngIf="error.mobileNum.errors.required">Mobile Number is required</mat-error>
+                    <mat-error *ngIf="error.mobileNum.errors.pattern">Mobile Number must have 10 digits</mat-error>
+                </mat-error>
+            </mat-form-field>
+
+            <br>
+            <br>
+            <br>
+
+            <button mat-button type="reset" class="reset">RESET</button>
+            <button mat-button type="submit" class="register" [disabled]="!myForm.valid">REGISTER</button>
+
+            <br>
+            <br>
+        </form>
+    </div>
+</mat-card>

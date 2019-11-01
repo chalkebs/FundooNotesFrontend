@@ -1,0 +1,35 @@
+<mat-dialog-content class="dialog-box-padding" [ngStyle]="{'background': this.data.color}" [formGroup]="dialogForm">
+    <div class="dialog" fxLayoutGap="13px" fxLayout="column">
+        <div fxLayout="row">
+            <textarea id="note-title-textarea" formControlName="noteTitle" matInput value="{{ this.data.noteTitle }}" cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="7"></textarea>
+            <mat-icon matTooltip="Pin note" *ngIf="pin_note==true" id="note-pin-icon" (click)="pin_note = !pin_note">turned_in_not</mat-icon>
+            <mat-icon matTooltip="Unpin note" *ngIf="pin_note==false" id="note-pin-icon" (click)="pin_note = !pin_note">turned_in</mat-icon>
+        </div>
+        <textarea formControlName="noteData" id="note-data-textarea" matInput value="{{ this.data.noteData }}" cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="7" autofocus></textarea>
+        <div fxLayout="row">
+            <div class="note-toolbar" fxLayout="row" fxLayoutAlign="space-evenly center">
+                <mat-menu #paletteColor="matMenu">
+                    <div class="palette" fxLayout="row wrap" fxLayoutGap="8px">
+                        <button mat-mini-fab (click)="color(c,this.data.noteId)" *ngFor="let c of colorCodes" class="circle" [ngStyle]="{'background':c}">
+                        </button>
+                    </div>
+                </mat-menu>
+                <mat-icon matTooltip="Remind me" class="note-icon">add_alert</mat-icon>
+                <mat-icon matTooltip="Collaborator" class="note-icon">person_add</mat-icon>
+                <mat-icon matTooltip="Change color" class="note-icon">palette</mat-icon>
+                <mat-icon matTooltip="Add image" class="note-icon">crop_original</mat-icon>
+                <mat-icon matTooltip="Archive" class="note-icon">archive</mat-icon>
+                <mat-icon [matMenuTriggerFor]="menu" matTooltip="More" class="note-icon">more_vert</mat-icon>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="onDelete()" class="menu-labels">Delete note</button>
+                    <button mat-menu-item class="menu-labels">Add label</button>
+                    <button mat-menu-item class="menu-labels">Make a copy</button>
+                    <button mat-menu-item class="menu-labels">Show checkboxes</button>
+                </mat-menu>
+                <mat-icon matTooltip="Undo" class="note-icon">undo</mat-icon>
+                <mat-icon matTooltip="Redo" class="note-icon">redo</mat-icon>
+            </div>
+            <button id="note-close-button" mat-dialog-close (click)="onUpdate()">Close</button>
+        </div>
+    </div>
+</mat-dialog-content>

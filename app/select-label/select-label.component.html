@@ -1,0 +1,10 @@
+<mat-dialog-content fxLayout="column">
+    <h3 id="first-section">Label note</h3>
+    <mat-divider id="divider"></mat-divider>
+    <br>
+    <div *ngFor="let l of this.data.labels">
+        <mat-checkbox (click)="isChecked(l.labelId)"></mat-checkbox>
+        <label id="checkbox-label">{{l.labelTitle}}</label>
+        <p></p>
+    </div>
+</mat-dialog-content>

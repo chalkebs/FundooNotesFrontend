@@ -1,0 +1,91 @@
+mat-divider {
+    margin-block-start: 15px;
+    margin-block-end: 15px;
+    margin-inline-start: 184px;
+    margin-inline-end: 96px;
+}
+
+.margin-adjustment {
+    margin-block-start: -31px;
+}
+
+.note-mat-card {
+    width: 850px;
+    height: max-content;
+    border: #5f6368;
+    place-content: center;
+    align-self: center;
+    padding: 5px;
+    margin-inline-start: 225px;
+}
+
+@media only screen and (max-width: 900px) {
+    .note-mat-card {
+        width: 90%;
+    }
+}
+
+.circle {
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    margin: 3px;
+    box-shadow: rgb(161, 159, 159);
+}
+
+.palette {
+    height: 103px;
+    width: 150px;
+}
+
+.display-note {
+    background-color: rgb(255, 255, 255);
+    height: max-content;
+    width: 250px;
+    opacity: 1;
+    position: relative;
+    border: 0.5px solid transparent;
+    margin: 8px;
+    border-color: #e4e4e4;
+    border-radius: 8px;
+    box-shadow: none;
+    padding: 13px;
+}
+
+.note-title-field {
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    display: inline-block;
+    word-break: break-word;
+    width: 204px;
+    margin-top: -29px;
+}
+
+.pin-icon {
+    font-size: 22px;
+    cursor: pointer;
+    margin-inline-start: 198px;
+}
+
+.note-data-field {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    display: inline-block;
+    word-break: break-word;
+    width: 204px;
+}
+
+.note-icons {
+    font-size: 17px;
+    opacity: 0.8;
+    margin-top: 6px;
+    margin-inline-start: 3px;
+}
+
+.note-icons:hover {
+    opacity: 1;
+}
+
+.menu-labels {
+    font-size: 13px;
+}

@@ -1,0 +1,123 @@
+.dialog-header {
+    z-index: 990;
+}
+
+.collaborators-div {
+    overflow-y: auto;
+    padding: 5px;
+}
+
+h4 {
+    margin-top: 0px;
+}
+
+mat-divider {
+    margin-left: -24px;
+    margin-right: -24px;
+}
+
+.div-padding {
+    padding: 5px;
+}
+
+.collab-pic {
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    box-shadow: 0 1px 1px 1px rgba(60, 64, 67, 0.149);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+}
+
+.div-name-emailId {
+    flex: 1 0 auto;
+    margin: 0 13px;
+    margin-top: 5px;
+}
+
+#first-last-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: #202124;
+    direction: ltr;
+    font-family: 'Roboto', arial, sans-serif;
+}
+
+#owner {
+    font-size: 13px;
+    font-style: italic;
+    margin-left: 5px;
+    color: #202124;
+    direction: ltr;
+    font-family: 'Roboto', arial, sans-serif;
+}
+
+#email-id {
+    color: #5f6368;
+    font-size: 13px;
+    direction: ltr;
+    font-family: 'Roboto', arial, sans-serif;
+}
+
+#email-id-input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid transparent;
+    box-shadow: none;
+    color: #3c4043;
+    font-size: 13px;
+    font-family: 'Roboto', arial, sans-serif;
+    height: 25px;
+    outline: none;
+    padding: 0;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    cursor: text;
+    font: 400 13.3333px Arial;
+    margin-top: 7px;
+}
+
+#dialog-box-actions {
+    background-color: rgba(0, 0, 0, 0.07);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 15px;
+    margin-left: -24px;
+    margin-right: -24px;
+    z-index: 990;
+}
+
+.cancel-save-button {
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.87);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    letter-spacing: .01785714em;
+    font-family: 'Google Sans', Roboto, Arial, sans-serif;
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    height: 36px;
+    padding: 8px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    outline: none!important;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: #EDEDED;
+}
+
+.cancel-save-button:hover {
+    background-color: rgba(95, 99, 104, 0.161);
+}

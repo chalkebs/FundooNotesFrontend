@@ -1,0 +1,38 @@
+<form [formGroup]="collabForm" (ngSubmit)="onSave()">
+    <mat-dialog-content>
+        <h4>Collaborators</h4>
+        <mat-divider></mat-divider>
+        <div fxLayout="column">
+            <br>
+            <div class="collaborators-div" fxLayout="row">
+                <img class="collab-pic" src="{{this.source}}">
+                <div class="div-name-emailId" fxLayout="column">
+                    <div fxLayout="row">
+                        <div id="first-last-name">{{this.firstName}} {{this.lastName}}</div>
+                        <div id="owner">(Owner)</div>
+                    </div>
+                    <div id="email-id">{{this.emailId}}</div>
+                </div>
+            </div>
+            <div *ngIf="c==''" class="collaborators-div" fxLayout="row" ngFor="let c of collab">
+                <img class="collab-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxg_j0tsamW7HWzaVx_6qWORf96YE8576mjCdn9HS4iCTGul6p-Q">
+                <div class="div-name-emailId">{{c[0]}}</div>
+            </div>
+            <div class="div-padding" fxLayout="row">
+                <img class="collab-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxg_j0tsamW7HWzaVx_6qWORf96YE8576mjCdn9HS4iCTGul6p-Q">
+                <form [formGroup]="collabForm">
+                    <input class="div-name-emailId" matInput formControlName="collaboratorsName" id="email-id-input" type="text" placeholder="Email to share with">
+                </form>
+            </div>
+        </div>
+        <br>
+    </mat-dialog-content>
+    <mat-dialog-actions fxLayoutGap="5%" id="dialog-box-actions">
+        <button mat-raised-button class="cancel-save-button" mat-dialog-close>
+        Cancel
+    </button>
+        <button (click)="onSave()" mat-raised-button class="cancel-save-button">
+        Save
+    </button>
+    </mat-dialog-actions>
+</form>

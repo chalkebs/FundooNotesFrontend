@@ -1,0 +1,21 @@
+<div class="note-mat-card" fxLayoutAlign="center start" fxLayout="row wrap">
+    <mat-card class="display-note" [ngStyle]="{'background':n.color}" fxLayout="column" fxLayoutGap="7px" *ngFor="let n of sendtrashNotes">
+        <div fxLayout="row">
+            <div class="note-title-field" fxLayout="row">
+                {{ n.noteTitle }}
+            </div>
+        </div>
+        <div class="note-data-field">
+            {{ n.noteData }}
+        </div>
+        <mat-card-actions fxLayout="row" fxLayoutAlign="start start">
+            <div fxLayout="row" fxLayoutGap="12px">
+                <mat-icon mat-button [matMenuTriggerFor]="menu" matTooltip="More" class="note-icons">more_vert</mat-icon>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="onDelete(n.noteId)" class="menu-labels">Delete note</button>
+                    <button mat-menu-item (click)="trash1(n.noteId)" class="menu-labels">Recover</button>
+                </mat-menu>
+            </div>
+        </mat-card-actions>
+    </mat-card>
+</div>

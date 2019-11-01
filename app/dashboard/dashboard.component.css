@@ -1,0 +1,498 @@
+.dashboard-container {
+    flex-wrap: nowrap;
+    min-height: 636px;
+    background-color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .dashboard-container {
+        width: 0%;
+        margin: 0px;
+    }
+}
+
+.menu-bar {
+    background-color: white;
+    position: fixed;
+    z-index: 999;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0px 12px;
+}
+
+#keep-logo {
+    width: 40px;
+    height: 40px;
+}
+
+#FundooApp-label {
+    font-size: 21.5px;
+    font-family: sans-serif, Arial;
+    color: #5f6368;
+    opacity: 1;
+}
+
+.search-bar {
+    border-radius: 8px;
+    margin-inline-start: 70px;
+    height: 48px;
+    width: 680px;
+    background-color: #F1F3F4;
+    margin-inline-end: 12px;
+}
+
+@media only screen and (max-width: 479px) {
+    .search-bar {
+        margin: 0px;
+        width: 200px;
+    }
+}
+
+.search-icon {
+    margin-inline-start: 9px;
+}
+
+@media only screen and (max-width: 479px) {
+    .search-icon {
+        width: 30px;
+    }
+}
+
+.search-input {
+    margin-inline-start: 8px;
+    margin-block-start: 3px;
+    border: none;
+    border-color: transparent;
+    background-color: transparent;
+    height: 35px;
+    width: 523px;
+    outline: none;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    -webkit-appearance: none;
+    margin-inline-end: 50px;
+}
+
+@media only screen and (max-width: 479px) {
+    .search-input {
+        margin: 0px;
+        margin-inline-end: 0px;
+        width: 0px;
+    }
+}
+
+.refresh-button {
+    display: block;
+}
+
+@media only screen and (max-width: 479px) {
+    .refresh-button {
+        margin-inline-start: 20px;
+    }
+}
+
+#icon-set {
+    margin-inline-start: 36px;
+}
+
+@media only screen and (max-width: 479px) {
+    #icon-set {
+        margin-inline-start: 0px;
+    }
+}
+
+.note-toolbar {
+    width: 568px;
+}
+
+@media only screen and (max-width: 479px) {
+    .note-toolbar {
+        margin-inline-start: 1px;
+    }
+}
+
+.icon-opacity {
+    opacity: 0.6;
+}
+
+.icon-opacity:hover {
+    opacity: 1;
+}
+
+.apps-logout-menu {
+    margin-inline-start: 47px;
+}
+
+@media only screen and (max-width: 479px) {
+    .apps-logout-menu {
+        margin-inline-start: 20px;
+    }
+}
+
+.drawer-div {
+    background-color: white;
+}
+
+.drawer-container {
+    height: 100%;
+}
+
+#drawer {
+    margin-inline-start: 4px;
+    border: none;
+    position: fixed;
+    margin-block-start: 65px;
+    width: 187px;
+}
+
+@media only screen and (max-width: 300px) {
+    #drawer {
+        width: 90%;
+        margin: 0px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        z-index: 2;
+    }
+}
+
+.drawer-icon {
+    margin-inline-start: 16px;
+}
+
+.drawer-label {
+    margin-top: 11px;
+    margin-inline-start: 20px;
+}
+
+.drawer-section {
+    margin-block-start: 0px;
+    margin-block-end: 11px;
+    border-top-right-radius: 52px;
+    border-bottom-right-radius: 52px;
+}
+
+.drawer-section:hover {
+    background-color: #F1F3F4;
+    cursor: pointer;
+}
+
+.drawer-section:active,
+.drawer-section:focus {
+    background: #fcefc3;
+    outline: none;
+}
+
+#label-label {
+    font-size: 15px;
+    margin-inline-start: 27px;
+}
+
+#label-title {
+    overflow: hidden;
+    width: 154px;
+}
+
+.label-section {
+    margin-block-start: 17px;
+    margin-block-end: 11px;
+}
+
+.drawer-content {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+.notes-card {
+    background-color: rgb(255, 255, 255);
+    height: 47px;
+    width: 600px;
+    margin-block-start: 34px;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 2px 6px 2px rgba(60, 64, 67, 0.149);
+    opacity: 1;
+    position: relative;
+    border-radius: 8px;
+}
+
+@media only screen and (max-width: 479px) {
+    .notes-card {
+        width: 300px;
+        margin: 0px;
+    }
+}
+
+.notes-expanded-card {
+    background-color: rgb(255, 255, 255);
+    width: 600px;
+    margin-block-start: 34px;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 2px 6px 2px rgba(60, 64, 67, 0.149);
+    opacity: 1;
+    position: relative;
+    border-radius: 8px;
+}
+
+@media only screen and (max-width: 479px) {
+    .notes-expanded-card {
+        width: 300px;
+        margin: 0px;
+    }
+}
+
+.input-notes {
+    border: none;
+    border-color: transparent;
+    background-color: transparent;
+    outline: none;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    width: 434px;
+}
+
+@media only screen and (max-width: 479px) {
+    .input-notes {
+        width: 130px;
+        margin: 0px;
+    }
+}
+
+.matcard-icon {
+    line-height: 0.6;
+    opacity: 0.6;
+    margin-inline-start: 19px;
+}
+
+@media only screen and (max-width: 479px) {
+    .matcard-icon {
+        margin-inline-start: 8px;
+    }
+}
+
+.matcard-icon:hover {
+    opacity: 1;
+}
+
+.mat-card-icons {
+    cursor: pointer;
+    width: 129px;
+}
+
+@media only screen and (max-width: 479px) {
+    .mat-card-icons {
+        margin-inline-start: 40px;
+    }
+}
+
+.pin-icon {
+    cursor: pointer;
+}
+
+.textarea {
+    width: 540px;
+    border: none;
+    border-color: transparent;
+    background-color: transparent;
+    outline: none;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+.textarea-note {
+    width: 565px;
+    border: none;
+    border-color: transparent;
+    background-color: transparent;
+    outline: none;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+.close-button {
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    padding: 8px;
+    outline: none;
+    margin-inline-start: 173px;
+}
+
+@media only screen and (max-width:479px) {
+    .close-button {
+        margin-inline-start: 35px;
+    }
+}
+
+.close-button:hover {
+    background-color: #F1F3F4;
+}
+
+.notes-icons {
+    font-size: 17px;
+    margin-top: 5px;
+    opacity: 0.8;
+}
+
+.notes-icons:hover {
+    opacity: 1;
+}
+
+.pin-icon {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.note-icons {
+    font-size: 17px;
+    opacity: 0.8;
+    margin-top: 6px;
+    margin-inline-start: 3px;
+}
+
+.note-icons:hover {
+    opacity: 1;
+}
+
+#mat-form-field-icon {
+    opacity: 0.5;
+    font-size: 10%;
+}
+
+#label-note {
+    opacity: 0.5;
+    font-size: 10%;
+}
+
+.note-title {
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+}
+
+.note-data {
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+mat-drawer-content {
+    background-color: white;
+    margin-block-start: 43px;
+}
+
+.display-note {
+    background-color: rgb(255, 255, 255);
+    height: max-content;
+    width: 250px;
+    opacity: 1;
+    position: relative;
+    border: 0.5px solid transparent;
+    margin: 8px;
+    border-color: #e4e4e4;
+    border-radius: 8px;
+    box-shadow: none;
+    padding: 13px;
+}
+
+.note-mat-card {
+    width: 850px;
+    height: max-content;
+    border: #5f6368;
+    place-content: center;
+    align-self: center;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+    .note-mat-card {
+        width: 90%;
+    }
+}
+
+.note-title-field {
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    display: inline-block;
+    word-break: break-word;
+    width: 204px;
+}
+
+.note-data-field {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    display: inline-block;
+    word-break: break-word;
+    width: 204px;
+}
+
+.menu-labels {
+    font-size: 13px;
+}
+
+#profile {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+}
+
+#internal-profile {
+    padding: 8px;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+}
+
+#first-last-name {
+    padding: 4px;
+    margin-block-start: 10px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+#email-id {
+    padding: 4px;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+}
+
+#main-profile-menu {
+    width: max-content;
+}
+
+.profile-button {
+    margin-top: 9px;
+    margin-left: 10px;
+    margin-inline-end: 13px;
+    background-color: #FDFDFD;
+}
+
+.profile-button:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+}
+
+#close-search {
+    font-size: large;
+    opacity: 0.8;
+}
+
+#close-search:hover {
+    background-color: #F1F3F4;
+    opacity: 1;
+}
+
+.circle {
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    margin: 3px;
+    box-shadow: rgb(161, 159, 159);
+}
+
+.palette {
+    height: 103px;
+    width: 150px;
+}
+
+.mat-actions {
+    margin-bottom: 0px;
+}

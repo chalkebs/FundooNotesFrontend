@@ -1,0 +1,46 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.full-width-dialog .mat-dialog-container {
+    max-height: max-content;
+    width: 598px;
+    border-radius: 8px;
+    margin-block-start: -189px;
+}
+
+.backdrop-background,
+.backdrop-background-image,
+.backdrop-background-label,
+.backdrop-background-delete,
+.backdrop-background-collaborator {
+    background: rgba(235, 235, 235, 0.5);
+}
+
+.full-width-image-dialog {
+    height: max-content;
+    width: 343px;
+    border-radius: 8px;
+}
+
+.full-width-label-dialog {
+    width: 300px;
+}
+
+.full-width-delete-dialog {
+    width: 430px;
+    height: max-content;
+}
+
+.full-width-select-label-dialog {
+    width: 230px;
+    height: 500px;
+    padding: 0px;
+}
+
+.full-width-collaborator-dialog {
+    width: 450px;
+    max-height: max-content;
+}

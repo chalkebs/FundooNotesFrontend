@@ -1,0 +1,9 @@
+<mat-dialog-content>
+    <div id="sentence">
+        We’ll delete this label and remove it from all of your Keep notes. Your notes won’t be deleted.
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="5%">
+    <button id="cancel-button" mat-raised-button mat-dialog-close>Cancel</button>
+    <button (click)="onDelete()" id="delete-button" mat-raised-button mat-dialog-close>Delete</button>
+</mat-dialog-actions>

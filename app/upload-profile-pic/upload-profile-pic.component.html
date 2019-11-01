@@ -1,0 +1,16 @@
+<mat-dialog-content>
+    <form enctype="multipart/form-data">
+        <p id="choose-file-text">Choose Image to upload :</p>
+        <div class="upload-btn-wrapper">
+            <button class="btn">Upload a file</button>
+            <input type="file" name="files" (change)="upload($event.target.files[0])" />
+        </div>
+        <br>
+        <br>
+        <br>
+        <div fxLayout="row" fxLayoutGap="20%">
+            <button mat-raised-button color="warn" (click)="removePic()">Remove Profile Pic</button>
+            <button mat-raised-button color="primary" mat-dialog-close>Cancel</button>
+        </div>
+    </form>
+</mat-dialog-content>

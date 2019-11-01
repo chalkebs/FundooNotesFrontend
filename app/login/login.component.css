@@ -1,0 +1,62 @@
+.formContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.formContainer>* {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.mainForm {
+    margin-top: 13%;
+    border-radius: 10px;
+    margin-bottom: 8%;
+    margin-left: 33%;
+    margin-right: 33%;
+    border-color: rgb(253, 255, 253);
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (max-width: 600px) {
+    .mainForm {
+        width: 90%;
+        margin: 100px 0px 0px 0px;
+    }
+}
+
+.formInputs {
+    width: 100%;
+}
+
+.register {
+    margin-inline-start: 3px;
+    width: 48%;
+    background-color: rgb(139, 214, 210);
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+}
+
+.register:hover {
+    opacity: 0.6;
+}
+
+.login {
+    margin-inline-start: 7px;
+    width: 48%;
+    background-color: rgb(103, 199, 103);
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.login:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.forgotPassword {
+    margin-inline-start: 30%;
+}
+
+.forgotPassword:hover {
+    color: blue;
+}
